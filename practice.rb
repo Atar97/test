@@ -6,15 +6,16 @@ class Array
     lower = self.take(mid)
     upper = self.drop(mid)
     if self[mid] < target
-      result = binary_search(upper, target)
+      result = upper.binary_search(target)
       result.nil? ? result : result + mid
     else
-      binary_search(lower, target)
+      lower.binary_search(target)
     end 
   end 
   
 end 
 
 def fib_rec(n)
+  return [1] if n <= 1
   
 end 
